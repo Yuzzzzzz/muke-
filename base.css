@@ -1,0 +1,272 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+    /* 默认有边距，都要清除 */
+    margin: 0;
+    padding: 0;
+    /*字体设置*/
+    font-size: 14px;
+    font-family: "Microsoft Yahei",sans-serif;
+    color: #ccc;
+    /* 去掉列表的原点 */
+    list-style: none;
+    /* 默认鼠标 */
+    cursor: default;
+}
+/*可选*/
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+ 
+/*行内块元素*/
+input,img{
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    outline-style: none;
+    vertical-align: bottom; 
+}
+ 
+/*行内元素*/
+a,a:active,a:visited{
+    /*下划线和颜色*/
+    text-decoration: none;
+}
+textarea{
+    /* 边框清零 */
+    border:none;
+    /* 轮廓线清零 */
+    outline: none;
+    /* 防止文本域被随意拖拽 */
+    resize: none;
+}
+ 
+i{
+    /*文字样式*/
+    font-style: normal; 
+}
+ 
+table{
+    /*边框合并*/
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+ 
+/* 使用伪元素清除浮动 */
+.clearfix::before,
+.clearfix::after{
+    content:"";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: none;
+    clear: both;
+}
+ 
+.clearfix {
+    *zoom: 1;
+}
+ 
+/* 版心*/
+.w{
+    width: 1883px;
+    margin: 0 auto;
+}
+ 
+/*可选*/
+/*单选框和复选框的配置，一般是分开的*/
+input[type="radio"],input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    display: none;
+}
+ 
+label{
+    display: inline-block;
+    cursor: pointer;
+}
+ 
+label input[type="radio"]+span,label input[type="checkbox"]+span{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url("../images/nocheck.png") no-repeat;
+}
+ 
+label input[type="radio"]:checked+span,label input[type="checkbox"]:checked+span{
+    background: url("../images/check.png") no-repeat;
+}
+ 
+label input[type="radio"]:checked~i,label input[type="checkbox"]:checked~i{
+    color: #38d6ff;
+}
+ 
+/*可选*/
+/* 自定义数字框配置 */
+input[type="number"]{
+    width: 76px;
+    height: 36px;
+    background-color: rgba(5,45,82,0.4);
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 20px;
+    padding: 0 10px;
+}
+ 
+input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+ 
+input[type="number"]+div{
+    width: 30px;
+    height: 40px;
+    padding-left: 2px;
+    cursor: pointer;
+}
+ 
+input[type="number"]+div > .count_add{
+    display: block;
+    width: 28px;
+    height: 19px;
+    background: url("../images/count_add.png") no-repeat;
+    background-size: contain;
+    margin-bottom: 2px;
+}
+ 
+input[type="number"]+div > .count_subtract{
+    display: block;
+    width: 28px;
+    height: 19px;
+    background: url("../images/count_subtract.png") no-repeat;
+    background-size: contain;
+}
+#nav{
+    background-color:white;
+    height: 72px;
+    width: 1550px;
+    box-shadow: 0 4px 8px 0 rgba(7, 17, 27, 0.1);
+}
+#nav #logo{
+    width: 180px;
+}
+#nav #logo .img-logo{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-left: 20px;
+}
+#nav ul li{
+    float :left;
+}
+#nav ul li a{
+    display: block !important;                                                                
+    height :72px;
+    line-height: 72px;
+    padding: 0 20px 0 15px;
+    text-align: center;
+    color: #4D555D;
+    font-size: 16px !important;
+}
+#nav ul li a:hover{
+    color: black;
+}
+#nav .container{
+    position: relative;
+    float: left;
+    width: 500px;
+    height: 72px;
+}
+#nav .container form{
+    position: relative;
+    height: 72px;
+    width: 300px;
+    margin: 0 auto;
+}
+#nav .container input[type=text]{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 280px;
+    top: 27px;
+    right: 70px;
+    border-bottom: 1px solid rgb(217, 221, 225);
+}
+#nav .container .search-area-text{
+    display: block;
+    position: absolute;
+    bottom: 28px;
+    left: 40px;
+    z-index: 100;
+}
+#nav .container .search-area-text a{
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px !important;
+    border: 1px;
+    color: #4D555D;
+    background-color: #f3f5f7;
+}
+#nav .container .search-area-button{
+    padding: 0 3px;
+    width: 8px;
+}
+#nav .container .search-area-button i{
+    position: relative;
+    float: right;
+    left: 190px;
+    bottom: 3px;
+}
+#nav .nav-right{
+    position: relative;
+    float: right;
+    width: 350px;
+    height: 100%;
+}
+#nav .nav-right .shopc{
+    margin: 18px 0;
+}
+#nav .nav-right li a{
+    font-size: 14px !important;
+    color: #71777d;
+    padding: 0 15px;
+}
+#nav .nav-right li .shopcar{
+    display: block;
+    height: 36px;
+    border: 1px solid black;
+    border-radius: 18px;
+    text-align: center;
+    line-height: 36px;
+    border-color: rgb(217, 221, 225) !important;
+}
+#nav .nav-right li .shopping-cart-icon-gouwuche{
+    position: relative;
+    top: 2px;
+    font-size: 16px;
+    margin-right: 8px;
+}
+#nav .nav-right li .dling{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #f01414;
+    right: 138px;
+    top: 25px;
+    border-radius: 50%;
+}
+#nav .nav-right li a.head-box{
+    width: 72px;
+}
+#nav .nav-right li img{
+    display: block;
+    border-color: #4d5559; 
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px; 
+}
